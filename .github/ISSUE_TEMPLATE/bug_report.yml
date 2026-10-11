@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible defect without private session data
+title: "[bug]: "
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach captures, TLS keys, JWTs, cookies, `.env` files or account data.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0 or full commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Windows collector
+        - Market worker
+        - Economy API
+        - Economy web
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Synthetic reproduction
+      description: Include sanitized steps and expected/actual behavior.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed credentials, packet contents and account identifiers.
+          required: true

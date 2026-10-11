@@ -1,0 +1,23 @@
+FROM python:3.12.7-slim-bookworm
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates tshark \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir cryptography==46.0.3
+RUN addgroup --system aion2-worker \
+    && adduser --system --ingroup aion2-worker --home /nonexistent --no-create-home aion2-worker
+WORKDIR /opt/aion2
+COPY scripts/a2bus_to_pcap.py scripts/build_economy_views.py scripts/build_market_summary_targets.py ./scripts/
+COPY scripts/export_economy_snapshot.py scripts/market_history.py scripts/market_summary_probe.py ./scripts/
+COPY scripts/market_session_probe.py scripts/market_tls_contract_sanitizer.py ./scripts/
+COPY services/economy-api/economy_api ./services/economy-api/economy_api
+COPY services/market-worker/worker.py ./services/market-worker/worker.py
+COPY configs/global-market-dimensions.json configs/global-market-rules.json ./configs/
+COPY configs/global-market-summary-targets-v1.json configs/global-server-registry.json ./configs/
+COPY exports/economy/item-catalog.json exports/economy/item-icons.json exports/economy/recipes.json ./exports/economy/
+RUN mkdir -p /var/lib/aion2/inbox /var/lib/aion2/state /var/lib/aion2/snapshots \
+    && chown -R aion2-worker:aion2-worker /var/lib/aion2 /opt/aion2
+USER aion2-worker
+CMD ["python", "-B", "/opt/aion2/services/market-worker/worker.py"]

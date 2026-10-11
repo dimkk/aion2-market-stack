@@ -1,0 +1,21 @@
+{
+  "activeItems": 29587,
+  "build": 25650019,
+  "catalogItems": 9100,
+  "credentialsExported": false,
+  "databaseSha256": "972a0d37acb24ee2ff8a93039296130e14ff79244bf59f1d8037348f221a3c8b",
+  "legacyContractNormalized": true,
+  "limitations": [
+    "Historical sample; not current market data.",
+    "Summary rows are not individual auction listings.",
+    "Game-derived data is not covered by the source-code license."
+  ],
+  "marketScopes": 100,
+  "observedAt": "2026-10-10T06:45:06Z",
+  "rawExposed": false,
+  "revision": "b25650019-20261010T064506Z-c3ddcd92851a2",
+  "schemaVersion": "aion2.public-seed/v1",
+  "sourceSha256": "1bc907db8ced782f4a8b368a406dc1f5e44b4f10fb773fb745238f3536fa7d5d",
+  "summaryRows": 29587,
+  "views": 26
+}

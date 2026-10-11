@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install test dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --require-hashes -r services/economy-api/requirements-cloudru.lock
+          python -m pip install pytest==8.3.5
+      - name: Validate public package
+        run: python -B scripts/validate_self_hosted.py
+      - name: Test collector, worker, history and API
+        shell: pwsh
+        run: |
+          $env:PYTHONPATH = (Resolve-Path 'services/economy-api').Path
+          python -B -m pytest -q
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/economy-web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: apps/economy-web/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm test -- --run
+      - run: npm run build

@@ -1,0 +1,25 @@
+FROM node:22.12.0-bookworm-slim AS web-build
+WORKDIR /src/apps/economy-web
+COPY apps/economy-web/package.json apps/economy-web/package-lock.json ./
+RUN npm ci --ignore-scripts
+COPY apps/economy-web/ ./
+RUN npm run build
+
+FROM python:3.12.7-slim-bookworm AS runtime
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PORT=8080 \
+    SPA_ROOT=/opt/aion2-economy/web \
+    SNAPSHOT_ROOT=/var/lib/aion2/snapshots
+RUN addgroup --system aion2-api \
+    && adduser --system --ingroup aion2-api --home /nonexistent --no-create-home aion2-api
+WORKDIR /opt/aion2-economy
+COPY services/economy-api/requirements-cloudru.lock /tmp/requirements.lock
+RUN pip install --no-cache-dir --require-hashes -r /tmp/requirements.lock
+COPY services/economy-api/economy_api ./economy_api
+COPY --from=web-build /src/apps/economy-web/dist ./web
+RUN mkdir -p /var/lib/aion2/snapshots \
+    && chown -R aion2-api:aion2-api /var/lib/aion2 /opt/aion2-economy
+USER aion2-api
+EXPOSE 8080
+CMD ["sh", "-c", "exec gunicorn --bind 0.0.0.0:${PORT} --workers 1 --threads 8 --timeout 45 --access-logfile - --error-logfile - economy_api.wsgi:application"]

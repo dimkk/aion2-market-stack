@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "aion2.market-rules/v1",
+  "appliesToBuild": 25650019,
+  "observedAt": "2026-10-03T19:07:39Z",
+  "source": {
+    "authority": "qos-api.g.nc.com",
+    "path": "/trade/v1.0/policies",
+    "captureSha256": "c853402d77b62ba708bb8e10502b7f44a529a7b73d005cdd4ed755d21873b427",
+    "gameServerIds": [2301, 12301]
+  },
+  "serverFees": [
+    {
+      "gameServerId": 2301,
+      "fees": [
+        {"feeType": "RatioSellerCommission", "rawValue": 10},
+        {"feeType": "RatioRegistrationFee", "rawValue": 100}
+      ]
+    },
+    {
+      "gameServerId": 12301,
+      "fees": [
+        {"feeType": "RatioSellerCommission", "rawValue": 10},
+        {"feeType": "RatioRegistrationFee", "rawValue": 2}
+      ]
+    }
+  ]
+}

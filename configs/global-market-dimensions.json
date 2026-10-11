@@ -1,0 +1,916 @@
+{
+  "schemaVersion": "aion2.market-dimensions/v1",
+  "appliesToBuild": 25650019,
+  "observedAt": "2026-10-07T17:51:27.625505Z",
+  "source": {
+    "kind": "client-derived",
+    "authority": "AION2 Global read-only Market API + PLAYNC Global registry",
+    "reference": "evidence/global-market-trade-scope-mapping-20261007.json",
+    "evidenceSha256": "7ed584d0c7dfe4d2ee8ab6b056e3ff28df362c49b8c64f22927a12f0f88a587b",
+    "registryReference": "https://aion2.plaync.com/en-us/styleshop/all?class=GLADIATOR",
+    "registrySha256": "e967e07ef780b4d7154adee053ca84087b4b7117110c3502b472648ee26fe5a8",
+    "fullScanSha256": "767206a4acadd764029c0bded6ca1af63d483962ecc225454ed7596a114b21bc"
+  },
+  "servers": [
+    {
+      "gameServerId": 11501,
+      "region": "Asia",
+      "name": "Siel",
+      "nameRu": "Сиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11502,
+      "region": "Asia",
+      "name": "Nezekan",
+      "nameRu": "Неджакан",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11503,
+      "region": "Asia",
+      "name": "Vaizel",
+      "nameRu": "Байзел",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11504,
+      "region": "Asia",
+      "name": "Kaisinel",
+      "nameRu": "Кайсинель",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11505,
+      "region": "Asia",
+      "name": "Yustiel",
+      "nameRu": "Юстиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11506,
+      "region": "Asia",
+      "name": "Ariel",
+      "nameRu": "Ариэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11507,
+      "region": "Asia",
+      "name": "Fregion",
+      "nameRu": "Фрегион",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11508,
+      "region": "Asia",
+      "name": "Meslamtaeda",
+      "nameRu": "Мирастад",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11509,
+      "region": "Asia",
+      "name": "Hithanya",
+      "nameRu": "Хитани",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12501,
+      "region": "Asia",
+      "name": "Israphel",
+      "nameRu": "Израфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12502,
+      "region": "Asia",
+      "name": "Zikel",
+      "nameRu": "Джикел",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12503,
+      "region": "Asia",
+      "name": "Triniel",
+      "nameRu": "Триниэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12504,
+      "region": "Asia",
+      "name": "Lumiel",
+      "nameRu": "Румиэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12505,
+      "region": "Asia",
+      "name": "Marchutan",
+      "nameRu": "Маркутан",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12506,
+      "region": "Asia",
+      "name": "Azphel",
+      "nameRu": "Асфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12507,
+      "region": "Asia",
+      "name": "Ereshkigal",
+      "nameRu": "Эрискаль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12508,
+      "region": "Asia",
+      "name": "Beritra",
+      "nameRu": "Бритра",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12509,
+      "region": "Asia",
+      "name": "Nemon",
+      "nameRu": "Немон",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11301,
+      "region": "Europe",
+      "name": "Siel",
+      "nameRu": "Сиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11302,
+      "region": "Europe",
+      "name": "Nezekan",
+      "nameRu": "Неджакан",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11303,
+      "region": "Europe",
+      "name": "Vaizel",
+      "nameRu": "Байзел",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11304,
+      "region": "Europe",
+      "name": "Kaisinel",
+      "nameRu": "Кайсинель",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11305,
+      "region": "Europe",
+      "name": "Yustiel",
+      "nameRu": "Юстиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11306,
+      "region": "Europe",
+      "name": "Ariel",
+      "nameRu": "Ариэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11307,
+      "region": "Europe",
+      "name": "Fregion",
+      "nameRu": "Фрегион",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11308,
+      "region": "Europe",
+      "name": "Meslamtaeda",
+      "nameRu": "Мирастад",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11309,
+      "region": "Europe",
+      "name": "Hithanya",
+      "nameRu": "Хитани",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11310,
+      "region": "Europe",
+      "name": "Nania",
+      "nameRu": "Нания",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11311,
+      "region": "Europe",
+      "name": "Tahavatha",
+      "nameRu": "Тахабата",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11312,
+      "region": "Europe",
+      "name": "Luteros",
+      "nameRu": "Лутерс",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11313,
+      "region": "Europe",
+      "name": "Phernos",
+      "nameRu": "Фернос",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11314,
+      "region": "Europe",
+      "name": "Daminu",
+      "nameRu": "Дамину",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11315,
+      "region": "Europe",
+      "name": "Kasaka",
+      "nameRu": "Касака",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11316,
+      "region": "Europe",
+      "name": "Bakarma",
+      "nameRu": "Бакрама",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11317,
+      "region": "Europe",
+      "name": "Tsenka",
+      "nameRu": "Ченгарун",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11318,
+      "region": "Europe",
+      "name": "Kochi",
+      "nameRu": "Кочирун",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11319,
+      "region": "Europe",
+      "name": "Ishtar",
+      "nameRu": "Иштар",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11320,
+      "region": "Europe",
+      "name": "Tiamat",
+      "nameRu": "Тиамат",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11321,
+      "region": "Europe",
+      "name": "Gauss",
+      "nameRu": "Гаус",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11322,
+      "region": "Europe",
+      "name": "Lamuatan",
+      "nameRu": "Рамуатана",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12301,
+      "region": "Europe",
+      "name": "Israphel",
+      "nameRu": "Израфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12302,
+      "region": "Europe",
+      "name": "Zikel",
+      "nameRu": "Джикел",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12303,
+      "region": "Europe",
+      "name": "Triniel",
+      "nameRu": "Триниэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12304,
+      "region": "Europe",
+      "name": "Lumiel",
+      "nameRu": "Румиэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12305,
+      "region": "Europe",
+      "name": "Marchutan",
+      "nameRu": "Маркутан",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12306,
+      "region": "Europe",
+      "name": "Azphel",
+      "nameRu": "Асфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12307,
+      "region": "Europe",
+      "name": "Ereshkigal",
+      "nameRu": "Эрискаль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12308,
+      "region": "Europe",
+      "name": "Beritra",
+      "nameRu": "Бритра",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12309,
+      "region": "Europe",
+      "name": "Nemon",
+      "nameRu": "Немон",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12310,
+      "region": "Europe",
+      "name": "Hadala",
+      "nameRu": "Хадала",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12311,
+      "region": "Europe",
+      "name": "Ludra",
+      "nameRu": "Рудра",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12312,
+      "region": "Europe",
+      "name": "Ulgorn",
+      "nameRu": "Ульгорн",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12313,
+      "region": "Europe",
+      "name": "Munin",
+      "nameRu": "Мунин",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12314,
+      "region": "Europe",
+      "name": "Odar",
+      "nameRu": "Одар",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12315,
+      "region": "Europe",
+      "name": "Zemurru",
+      "nameRu": "Земурру",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12316,
+      "region": "Europe",
+      "name": "Kromede",
+      "nameRu": "Кромед",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12317,
+      "region": "Europe",
+      "name": "Quai",
+      "nameRu": "Квайринг",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12318,
+      "region": "Europe",
+      "name": "Baba",
+      "nameRu": "Бабарунг",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12319,
+      "region": "Europe",
+      "name": "Fafnir",
+      "nameRu": "Фафнир",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12320,
+      "region": "Europe",
+      "name": "Indnath",
+      "nameRu": "Инднах",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12321,
+      "region": "Europe",
+      "name": "Agnita",
+      "nameRu": "Агнита",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12322,
+      "region": "Europe",
+      "name": "Atiel",
+      "nameRu": "Атиэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11401,
+      "region": "South America",
+      "name": "Siel",
+      "nameRu": "Сиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11402,
+      "region": "South America",
+      "name": "Nezekan",
+      "nameRu": "Неджакан",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11403,
+      "region": "South America",
+      "name": "Vaizel",
+      "nameRu": "Байзел",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11404,
+      "region": "South America",
+      "name": "Kaisinel",
+      "nameRu": "Кайсинель",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11405,
+      "region": "South America",
+      "name": "Yustiel",
+      "nameRu": "Юстиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11406,
+      "region": "South America",
+      "name": "Ariel",
+      "nameRu": "Ариэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12401,
+      "region": "South America",
+      "name": "Israphel",
+      "nameRu": "Израфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12402,
+      "region": "South America",
+      "name": "Zikel",
+      "nameRu": "Джикел",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12403,
+      "region": "South America",
+      "name": "Triniel",
+      "nameRu": "Триниэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12404,
+      "region": "South America",
+      "name": "Lumiel",
+      "nameRu": "Румиэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12405,
+      "region": "South America",
+      "name": "Marchutan",
+      "nameRu": "Маркутан",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12406,
+      "region": "South America",
+      "name": "Azphel",
+      "nameRu": "Асфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11101,
+      "region": "North America - East",
+      "name": "Siel",
+      "nameRu": "Сиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11102,
+      "region": "North America - East",
+      "name": "Nezekan",
+      "nameRu": "Неджакан",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11103,
+      "region": "North America - East",
+      "name": "Vaizel",
+      "nameRu": "Байзел",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11104,
+      "region": "North America - East",
+      "name": "Kaisinel",
+      "nameRu": "Кайсинель",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11105,
+      "region": "North America - East",
+      "name": "Yustiel",
+      "nameRu": "Юстиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11106,
+      "region": "North America - East",
+      "name": "Ariel",
+      "nameRu": "Ариэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11107,
+      "region": "North America - East",
+      "name": "Fregion",
+      "nameRu": "Фрегион",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11108,
+      "region": "North America - East",
+      "name": "Meslamtaeda",
+      "nameRu": "Мирастад",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12101,
+      "region": "North America - East",
+      "name": "Israphel",
+      "nameRu": "Израфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12102,
+      "region": "North America - East",
+      "name": "Zikel",
+      "nameRu": "Джикел",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12103,
+      "region": "North America - East",
+      "name": "Triniel",
+      "nameRu": "Триниэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12104,
+      "region": "North America - East",
+      "name": "Lumiel",
+      "nameRu": "Румиэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12105,
+      "region": "North America - East",
+      "name": "Marchutan",
+      "nameRu": "Маркутан",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12106,
+      "region": "North America - East",
+      "name": "Azphel",
+      "nameRu": "Асфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12107,
+      "region": "North America - East",
+      "name": "Ereshkigal",
+      "nameRu": "Эрискаль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12108,
+      "region": "North America - East",
+      "name": "Beritra",
+      "nameRu": "Бритра",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11201,
+      "region": "North America - West",
+      "name": "Siel",
+      "nameRu": "Сиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11202,
+      "region": "North America - West",
+      "name": "Nezekan",
+      "nameRu": "Неджакан",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11203,
+      "region": "North America - West",
+      "name": "Vaizel",
+      "nameRu": "Байзел",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11204,
+      "region": "North America - West",
+      "name": "Kaisinel",
+      "nameRu": "Кайсинель",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 11205,
+      "region": "North America - West",
+      "name": "Yustiel",
+      "nameRu": "Юстиэль",
+      "faction": "Elyos",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12201,
+      "region": "North America - West",
+      "name": "Israphel",
+      "nameRu": "Израфель",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12202,
+      "region": "North America - West",
+      "name": "Zikel",
+      "nameRu": "Джикел",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12203,
+      "region": "North America - West",
+      "name": "Triniel",
+      "nameRu": "Триниэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12204,
+      "region": "North America - West",
+      "name": "Lumiel",
+      "nameRu": "Румиэль",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    },
+    {
+      "gameServerId": 12205,
+      "region": "North America - West",
+      "name": "Marchutan",
+      "nameRu": "Маркутан",
+      "faction": "Asmodians",
+      "market": "server",
+      "dimensionsConfirmed": true
+    }
+  ]
+}

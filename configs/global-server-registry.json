@@ -1,0 +1,941 @@
+{
+  "schemaVersion": "aion2.global-server-registry/v1",
+  "observedAt": "2026-10-07T17:51:27.625505Z",
+  "source": {
+    "authority": "aion2.plaync.com",
+    "url": "https://aion2.plaync.com/en-us/styleshop/all?class=GLADIATOR",
+    "field": "window._serverNameMap",
+    "sha256": "6b9f6ec72a49ba058468d5afa5f0f78b06bc8158684f44c73ed94f8b4eb513b0"
+  },
+  "serverCount": 100,
+  "worldNameCount": 100,
+  "regions": [
+    {
+      "code": "nae",
+      "name": "North America - East",
+      "serverCount": 16
+    },
+    {
+      "code": "naw",
+      "name": "North America - West",
+      "serverCount": 10
+    },
+    {
+      "code": "eu",
+      "name": "Europe",
+      "serverCount": 44
+    },
+    {
+      "code": "la",
+      "name": "South America",
+      "serverCount": 12
+    },
+    {
+      "code": "as",
+      "name": "Asia",
+      "serverCount": 18
+    }
+  ],
+  "servers": [
+    {
+      "gameServerId": 1501,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Siel",
+      "shortName": "SIE"
+    },
+    {
+      "gameServerId": 1502,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Nezekan",
+      "shortName": "NEZ"
+    },
+    {
+      "gameServerId": 1503,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Vaizel",
+      "shortName": "VAI"
+    },
+    {
+      "gameServerId": 1504,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kaisinel",
+      "shortName": "KAI"
+    },
+    {
+      "gameServerId": 1505,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Yustiel",
+      "shortName": "YUS"
+    },
+    {
+      "gameServerId": 1506,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Ariel",
+      "shortName": "ARI"
+    },
+    {
+      "gameServerId": 1507,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Fregion",
+      "shortName": "FRE"
+    },
+    {
+      "gameServerId": 1508,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Meslamtaeda",
+      "shortName": "MES"
+    },
+    {
+      "gameServerId": 1509,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Hithanya",
+      "shortName": "HIT"
+    },
+    {
+      "gameServerId": 2501,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Israphel",
+      "shortName": "ISR"
+    },
+    {
+      "gameServerId": 2502,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Zikel",
+      "shortName": "ZIK"
+    },
+    {
+      "gameServerId": 2503,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Triniel",
+      "shortName": "TRI"
+    },
+    {
+      "gameServerId": 2504,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Lumiel",
+      "shortName": "LUM"
+    },
+    {
+      "gameServerId": 2505,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Marchutan",
+      "shortName": "MAR"
+    },
+    {
+      "gameServerId": 2506,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Azphel",
+      "shortName": "AZP"
+    },
+    {
+      "gameServerId": 2507,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Ereshkigal",
+      "shortName": "ERE"
+    },
+    {
+      "gameServerId": 2508,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Beritra",
+      "shortName": "BER"
+    },
+    {
+      "gameServerId": 2509,
+      "region": "as",
+      "regionName": "Asia",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Nemon",
+      "shortName": "NEM"
+    },
+    {
+      "gameServerId": 1301,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Siel",
+      "shortName": "SIE"
+    },
+    {
+      "gameServerId": 1302,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Nezekan",
+      "shortName": "NEZ"
+    },
+    {
+      "gameServerId": 1303,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Vaizel",
+      "shortName": "VAI"
+    },
+    {
+      "gameServerId": 1304,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kaisinel",
+      "shortName": "KAI"
+    },
+    {
+      "gameServerId": 1305,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Yustiel",
+      "shortName": "YUS"
+    },
+    {
+      "gameServerId": 1306,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Ariel",
+      "shortName": "ARI"
+    },
+    {
+      "gameServerId": 1307,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Fregion",
+      "shortName": "FRE"
+    },
+    {
+      "gameServerId": 1308,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Meslamtaeda",
+      "shortName": "MES"
+    },
+    {
+      "gameServerId": 1309,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Hithanya",
+      "shortName": "HIT"
+    },
+    {
+      "gameServerId": 1310,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Nania",
+      "shortName": "NAN"
+    },
+    {
+      "gameServerId": 1311,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Tahavatha",
+      "shortName": "TAH"
+    },
+    {
+      "gameServerId": 1312,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Luteros",
+      "shortName": "LUT"
+    },
+    {
+      "gameServerId": 1313,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Phernos",
+      "shortName": "PHE"
+    },
+    {
+      "gameServerId": 1314,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Daminu",
+      "shortName": "DAM"
+    },
+    {
+      "gameServerId": 1315,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kasaka",
+      "shortName": "KAS"
+    },
+    {
+      "gameServerId": 1316,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Bakarma",
+      "shortName": "BAK"
+    },
+    {
+      "gameServerId": 1317,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Tsenka",
+      "shortName": "TSE"
+    },
+    {
+      "gameServerId": 1318,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kochi",
+      "shortName": "KOC"
+    },
+    {
+      "gameServerId": 1319,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Ishtar",
+      "shortName": "ISH"
+    },
+    {
+      "gameServerId": 1320,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Tiamat",
+      "shortName": "TIA"
+    },
+    {
+      "gameServerId": 1321,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Gauss",
+      "shortName": "GAU"
+    },
+    {
+      "gameServerId": 1322,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Lamuatan",
+      "shortName": "LAM"
+    },
+    {
+      "gameServerId": 2301,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Israphel",
+      "shortName": "ISR"
+    },
+    {
+      "gameServerId": 2302,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Zikel",
+      "shortName": "ZIK"
+    },
+    {
+      "gameServerId": 2303,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Triniel",
+      "shortName": "TRI"
+    },
+    {
+      "gameServerId": 2304,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Lumiel",
+      "shortName": "LUM"
+    },
+    {
+      "gameServerId": 2305,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Marchutan",
+      "shortName": "MAR"
+    },
+    {
+      "gameServerId": 2306,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Azphel",
+      "shortName": "AZP"
+    },
+    {
+      "gameServerId": 2307,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Ereshkigal",
+      "shortName": "ERE"
+    },
+    {
+      "gameServerId": 2308,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Beritra",
+      "shortName": "BER"
+    },
+    {
+      "gameServerId": 2309,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Nemon",
+      "shortName": "NEM"
+    },
+    {
+      "gameServerId": 2310,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Hadala",
+      "shortName": "HAD"
+    },
+    {
+      "gameServerId": 2311,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Ludra",
+      "shortName": "LUD"
+    },
+    {
+      "gameServerId": 2312,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Ulgorn",
+      "shortName": "ULG"
+    },
+    {
+      "gameServerId": 2313,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Munin",
+      "shortName": "MUN"
+    },
+    {
+      "gameServerId": 2314,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Odar",
+      "shortName": "ODA"
+    },
+    {
+      "gameServerId": 2315,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Zemurru",
+      "shortName": "ZEM"
+    },
+    {
+      "gameServerId": 2316,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Kromede",
+      "shortName": "KRO"
+    },
+    {
+      "gameServerId": 2317,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Quai",
+      "shortName": "QUA"
+    },
+    {
+      "gameServerId": 2318,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Baba",
+      "shortName": "BAB"
+    },
+    {
+      "gameServerId": 2319,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Fafnir",
+      "shortName": "FAF"
+    },
+    {
+      "gameServerId": 2320,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Indnath",
+      "shortName": "IND"
+    },
+    {
+      "gameServerId": 2321,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Agnita",
+      "shortName": "AGN"
+    },
+    {
+      "gameServerId": 2322,
+      "region": "eu",
+      "regionName": "Europe",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Atiel",
+      "shortName": "ATI"
+    },
+    {
+      "gameServerId": 1401,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Siel",
+      "shortName": "SIE"
+    },
+    {
+      "gameServerId": 1402,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Nezekan",
+      "shortName": "NEZ"
+    },
+    {
+      "gameServerId": 1403,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Vaizel",
+      "shortName": "VAI"
+    },
+    {
+      "gameServerId": 1404,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kaisinel",
+      "shortName": "KAI"
+    },
+    {
+      "gameServerId": 1405,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Yustiel",
+      "shortName": "YUS"
+    },
+    {
+      "gameServerId": 1406,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Ariel",
+      "shortName": "ARI"
+    },
+    {
+      "gameServerId": 2401,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Israphel",
+      "shortName": "ISR"
+    },
+    {
+      "gameServerId": 2402,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Zikel",
+      "shortName": "ZIK"
+    },
+    {
+      "gameServerId": 2403,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Triniel",
+      "shortName": "TRI"
+    },
+    {
+      "gameServerId": 2404,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Lumiel",
+      "shortName": "LUM"
+    },
+    {
+      "gameServerId": 2405,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Marchutan",
+      "shortName": "MAR"
+    },
+    {
+      "gameServerId": 2406,
+      "region": "la",
+      "regionName": "South America",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Azphel",
+      "shortName": "AZP"
+    },
+    {
+      "gameServerId": 1101,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Siel",
+      "shortName": "SIE"
+    },
+    {
+      "gameServerId": 1102,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Nezekan",
+      "shortName": "NEZ"
+    },
+    {
+      "gameServerId": 1103,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Vaizel",
+      "shortName": "VAI"
+    },
+    {
+      "gameServerId": 1104,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kaisinel",
+      "shortName": "KAI"
+    },
+    {
+      "gameServerId": 1105,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Yustiel",
+      "shortName": "YUS"
+    },
+    {
+      "gameServerId": 1106,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Ariel",
+      "shortName": "ARI"
+    },
+    {
+      "gameServerId": 1107,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Fregion",
+      "shortName": "FRE"
+    },
+    {
+      "gameServerId": 1108,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Meslamtaeda",
+      "shortName": "MES"
+    },
+    {
+      "gameServerId": 2101,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Israphel",
+      "shortName": "ISR"
+    },
+    {
+      "gameServerId": 2102,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Zikel",
+      "shortName": "ZIK"
+    },
+    {
+      "gameServerId": 2103,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Triniel",
+      "shortName": "TRI"
+    },
+    {
+      "gameServerId": 2104,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Lumiel",
+      "shortName": "LUM"
+    },
+    {
+      "gameServerId": 2105,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Marchutan",
+      "shortName": "MAR"
+    },
+    {
+      "gameServerId": 2106,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Azphel",
+      "shortName": "AZP"
+    },
+    {
+      "gameServerId": 2107,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Ereshkigal",
+      "shortName": "ERE"
+    },
+    {
+      "gameServerId": 2108,
+      "region": "nae",
+      "regionName": "North America - East",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Beritra",
+      "shortName": "BER"
+    },
+    {
+      "gameServerId": 1201,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Siel",
+      "shortName": "SIE"
+    },
+    {
+      "gameServerId": 1202,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Nezekan",
+      "shortName": "NEZ"
+    },
+    {
+      "gameServerId": 1203,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Vaizel",
+      "shortName": "VAI"
+    },
+    {
+      "gameServerId": 1204,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Kaisinel",
+      "shortName": "KAI"
+    },
+    {
+      "gameServerId": 1205,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 1,
+      "faction": "Elyos",
+      "name": "Yustiel",
+      "shortName": "YUS"
+    },
+    {
+      "gameServerId": 2201,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Israphel",
+      "shortName": "ISR"
+    },
+    {
+      "gameServerId": 2202,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Zikel",
+      "shortName": "ZIK"
+    },
+    {
+      "gameServerId": 2203,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Triniel",
+      "shortName": "TRI"
+    },
+    {
+      "gameServerId": 2204,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Lumiel",
+      "shortName": "LUM"
+    },
+    {
+      "gameServerId": 2205,
+      "region": "naw",
+      "regionName": "North America - West",
+      "raceId": 2,
+      "faction": "Asmodians",
+      "name": "Marchutan",
+      "shortName": "MAR"
+    }
+  ]
+}
