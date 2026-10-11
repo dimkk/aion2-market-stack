@@ -83,26 +83,31 @@ def _application() -> ApiApplication:
 
 
 def _safe_static_path(path: str) -> Path | None:
+    # Resolve the root at request time as well as the candidate. Besides being
+    # the correct traversal boundary, this keeps Windows drive/case aliases
+    # from making an otherwise in-root path fail ``relative_to``.
+    static_root = _STATIC_ROOT.resolve()
+    item_asset_root = _ITEM_ASSET_ROOT.resolve()
     item_asset = _ITEM_ASSET_PATH.fullmatch(path)
     if item_asset is not None:
-        candidate = (_ITEM_ASSET_ROOT / item_asset.group(1)).resolve()
+        candidate = (item_asset_root / item_asset.group(1)).resolve()
         try:
-            candidate.relative_to(_ITEM_ASSET_ROOT)
+            candidate.relative_to(item_asset_root)
         except ValueError:
             return None
         if candidate.is_file() and not candidate.is_symlink():
             return candidate
         return None
     relative = path.removeprefix("/")
-    candidate = (_STATIC_ROOT / relative).resolve()
+    candidate = (static_root / relative).resolve()
     try:
-        candidate.relative_to(_STATIC_ROOT)
+        candidate.relative_to(static_root)
     except ValueError:
         return None
     if candidate.is_file() and not candidate.is_symlink():
         return candidate
     if "." not in Path(relative).name:
-        index = (_STATIC_ROOT / "index.html").resolve()
+        index = (static_root / "index.html").resolve()
         if index.is_file() and not index.is_symlink():
             return index
     return None
