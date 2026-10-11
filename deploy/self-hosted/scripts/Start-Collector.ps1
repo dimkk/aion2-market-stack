@@ -10,6 +10,11 @@ $settings = @{}
 Get-Content -LiteralPath $envFile | ForEach-Object {
     if ($_ -match '^\s*([^#=]+)=(.*)$') { $settings[$Matches[1].Trim()] = $Matches[2].Trim() }
 }
+$packetBus = if ($settings.ContainsKey('AION2_FARM_PACKET_BUS')) {
+    $settings['AION2_FARM_PACKET_BUS']
+} else {
+    'runtime\private\packet-live'
+}
 $arguments = @(
     '-B', (Join-Path $project 'tools\public_collector\collector.py'),
     '--spool', (Join-Path $root 'runtime\private\capture'),
@@ -18,6 +23,9 @@ $arguments = @(
     '--seconds', $settings['AION2_CAPTURE_SECONDS'],
     '--interval', $settings['AION2_CAPTURE_INTERVAL_SECONDS']
 )
+if ($settings['AION2_FARM_PACKET_BUS_ENABLED'] -eq 'true') {
+    $arguments += @('--packet-bus-dir', (Join-Path $root $packetBus))
+}
 if ($Once) { $arguments += '--once' }
 & python @arguments
 exit $LASTEXITCODE

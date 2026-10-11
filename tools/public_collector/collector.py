@@ -18,12 +18,17 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
 import tempfile
 import time
 import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from tools.farm_tracker.packet_bus import CaptureBusSink
 KEYLOG_LINE = re.compile(
     rb"^(?:(?:CLIENT_RANDOM|CLIENT_EARLY_TRAFFIC_SECRET|CLIENT_HANDSHAKE_TRAFFIC_SECRET|"
     rb"SERVER_HANDSHAKE_TRAFFIC_SECRET|CLIENT_TRAFFIC_SECRET_[0-9]+|"
@@ -40,6 +45,7 @@ SAFE_ERRORS = frozenset(
         "collector_paths_overlap",
         "tls_keylog_invalid",
         "tls_keylog_missing",
+        "packet_bus_write_failed",
     }
 )
 
@@ -111,14 +117,47 @@ def build_bundle(capture: Path, keylog: Path, inbox: Path) -> dict[str, object]:
 
 
 def capture_once(
-    *, spool: Path, inbox: Path, keylog: Path, seconds: int, hosts: list[str]
+    *, spool: Path, inbox: Path, keylog: Path, seconds: int, hosts: list[str],
+    packet_bus_dir: Path | None = None,
 ) -> dict[str, object]:
     spool.mkdir(parents=True, exist_ok=True)
     inbox.mkdir(parents=True, exist_ok=True)
     before = {path.resolve() for path in spool.glob("npcap-*.pcapng")}
     recorder = _load_recorder()
     recorder.PRIVATE_ROOT = spool
-    recorder.capture("game", seconds, hosts)
+    sink = None
+    packet_bus_status = "disabled"
+    if packet_bus_dir is not None:
+        try:
+            sink = CaptureBusSink(packet_bus_dir)
+            packet_bus_status = "recording"
+        except Exception:
+            packet_bus_status = "initialization_failed"
+
+    def observe(captured_at_us, frame, scope):
+        nonlocal sink, packet_bus_status
+        if sink is None:
+            return
+        try:
+            sink.observe(captured_at_us, frame, scope)
+        except Exception:
+            packet_bus_status = "write_failed"
+            try:
+                sink.close()
+            except Exception:
+                pass
+            sink = None
+
+    try:
+        recorder.capture("game", seconds, hosts, observe if packet_bus_dir is not None else None)
+    finally:
+        if sink is not None:
+            try:
+                sink.close()
+                if packet_bus_status == "recording":
+                    packet_bus_status = "ready"
+            except Exception:
+                packet_bus_status = "close_failed"
     created = [
         path for path in spool.glob("npcap-*.pcapng") if path.resolve() not in before
     ]
@@ -126,7 +165,9 @@ def capture_once(
         raise ValueError("capture_artifact_not_unique")
     capture = created[0]
     try:
-        return build_bundle(capture, keylog, inbox)
+        receipt = build_bundle(capture, keylog, inbox)
+        receipt["packet_bus_status"] = packet_bus_status
+        return receipt
     finally:
         capture.unlink(missing_ok=True)
 
@@ -139,6 +180,7 @@ def main() -> int:
     parser.add_argument("--seconds", type=int, default=120)
     parser.add_argument("--interval", type=int, default=5)
     parser.add_argument("--host", action="append", default=[])
+    parser.add_argument("--packet-bus-dir", type=Path)
     parser.add_argument("--once", action="store_true")
     args = parser.parse_args()
     if not 10 <= args.seconds <= 300 or not 1 <= args.interval <= 300:
@@ -156,6 +198,7 @@ def main() -> int:
                 keylog=args.keylog.resolve(),
                 seconds=args.seconds,
                 hosts=args.host,
+                packet_bus_dir=args.packet_bus_dir.resolve() if args.packet_bus_dir else None,
             )
             print(json.dumps(receipt, sort_keys=True), flush=True)
         except KeyboardInterrupt:

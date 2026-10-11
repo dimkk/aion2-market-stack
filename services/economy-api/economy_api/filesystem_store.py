@@ -25,7 +25,7 @@ class FileSystemEconomyStore:
 
     Immutable view files are fsync'ed first.  ``current.json`` is then replaced
     atomically, so readers observe either the previous complete revision or the
-    new complete revision.  The Cloud.ru VM deployment intentionally runs one
+    new complete revision.  The self-hosted deployment intentionally runs one
     Gunicorn process with multiple threads; that makes the in-process lock the
     only publication lock required while keeping request concurrency.
     """

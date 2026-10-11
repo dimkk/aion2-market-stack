@@ -22,7 +22,17 @@ REQUIRED = (
     "deploy/self-hosted/scripts/Prepare-SeedData.ps1",
     "deploy/self-hosted/scripts/Start-Stack.ps1",
     "deploy/self-hosted/scripts/Start-Collector.ps1",
+    "deploy/self-hosted/scripts/Start-FarmTracker.ps1",
     "tools/public_collector/collector.py",
+    "tools/farm_tracker/app.py",
+    "tools/farm_tracker/contracts.py",
+    "tools/farm_tracker/decoder.py",
+    "tools/farm_tracker/history.py",
+    "tools/farm_tracker/packet_bus.py",
+    "tools/farm_tracker/quotes.py",
+    "tools/farm_tracker/session.py",
+    "tools/farm_tracker/sync.py",
+    "tools/farm_tracker/data/zone-catalog.json",
     "services/market-worker/worker.py",
     "scripts/build_seed_from_database.py",
     "exports/economy/item-catalog.json",
@@ -67,6 +77,11 @@ def validate(require_assets: bool) -> dict[str, object]:
         match = re.search(rf"(?m)^{re.escape(key)}=(.+)$", env_text)
         if match is None or "replace-with-" not in match.group(1):
             raise ValueError("self_hosted_env_secret_example_invalid")
+    if (
+        "AION2_FARM_PACKET_BUS_ENABLED=false" not in env_text
+        or not re.search(r"(?m)^AION2_FARM_MARKET_SERVER_ID=$", env_text)
+    ):
+        raise ValueError("self_hosted_farm_defaults_not_fail_closed")
     forbidden = ("authorization:", "bearer ", "jwt ey", "client_random ")
     if any(value in env_text.casefold() for value in forbidden):
         raise ValueError("self_hosted_env_contains_session_material")

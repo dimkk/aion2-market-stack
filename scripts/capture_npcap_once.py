@@ -32,6 +32,7 @@ SAFE_ERROR_CODES = {
     'invalid_socket_port',
     'npcap_address_family_mismatch',
     'npcap_capture_header_invalid',
+    'packet_bus_write_failed',
     'npcap_dynamic_filter_update_failed',
     'npcap_ip_version_invalid',
     'npcap_pseudo_header_invalid',
@@ -255,7 +256,7 @@ def replace_filter(dll, item, expression):
             dll.pcap_freecode(ct.byref(program))
 
 
-def capture(mode, seconds, hosts=()):
+def capture(mode, seconds, hosts=(), packet_observer=None):
     global FAILURE_STAGE
     FAILURE_STAGE = 'private_spool'
     root=PRIVATE_ROOT.resolve()
@@ -270,6 +271,7 @@ def capture(mode, seconds, hosts=()):
     if active.exists() or (root/'active-session.json').exists() or stop.exists():
         raise ValueError('active_capture_or_stale_stop_present')
     sockets=[]
+    scope={}
     FAILURE_STAGE = 'socket_scope'
     if mode == 'canary':
         for family,address in ((socket.AF_INET,'127.0.0.1'),(socket.AF_INET6,'::1')):
@@ -282,7 +284,8 @@ def capture(mode, seconds, hosts=()):
         expression,host_count=prelaunch_filter(hosts)
         tcp_count,udp_count=host_count,0
     else:
-        expression,tcp_count,udp_count=game_filter(current_game_scope(), hosts)
+        scope=current_game_scope()
+        expression,tcp_count,udp_count=game_filter(scope, hosts)
     FAILURE_STAGE = 'npcap_library'
     dll=library()
     error=ct.create_string_buffer(256)
@@ -351,13 +354,15 @@ def capture(mode, seconds, hosts=()):
                 if mode == 'game' and now >= next_filter_refresh:
                     next_filter_refresh=now+2.0
                     try:
-                        refreshed,refreshed_tcp,refreshed_udp=game_filter(current_game_scope(),hosts)
+                        refreshed_scope=current_game_scope()
+                        refreshed,refreshed_tcp,refreshed_udp=game_filter(refreshed_scope,hosts)
                         if refreshed != filter_expression:
                             if not all(replace_filter(dll,item,refreshed) for item in handles):
                                 raise ValueError('npcap_dynamic_filter_update_failed')
                             filter_expression=refreshed
                             tcp_count,udp_count=refreshed_tcp,refreshed_udp
                             filter_updates+=1
+                        scope=refreshed_scope
                         filter_errors=0
                     except (ValueError, OSError, subprocess.SubprocessError):
                         filter_errors+=1
@@ -378,6 +383,11 @@ def capture(mode, seconds, hosts=()):
                         raise ValueError('npcap_capture_header_invalid')
                     timestamp=h.seconds*1000000+h.microseconds
                     frame,wire=ethernet_record(item['linktype'],ct.string_at(payload,h.captured),h.original)
+                    if packet_observer is not None:
+                        try:
+                            packet_observer(timestamp,frame,scope)
+                        except Exception as error:
+                            raise ValueError('packet_bus_write_failed') from error
                     encoded=packet_block(timestamp,frame,wire,interface_id)
                     if stream.tell()+len(encoded) > MAX_FILE:
                         reason='file_budget'
