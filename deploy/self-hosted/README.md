@@ -8,7 +8,7 @@ The host collector is a small standalone project-owned Npcap wrapper. It may run
 alongside other overlays, but they are not part of this stack.
 
 The first start seeds SQLite and immutable views from `data/seed/`, so the UI is
-immediately populated with a historical sanitized example. A successful live
+immediately populated with the bundled historical derived database. A successful live
 scan publishes a new revision without resetting that history.
 
 ## Architecture

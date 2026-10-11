@@ -51,8 +51,8 @@ flowchart LR
   `admin` roles;
 - React Economy UI with items, server views, movers, crafting, farm sessions,
   and crawler status;
-- a sanitized historical seed database and views, so the site contains data on
-  first start;
+- the complete safe derived market-history database available at publication
+  time and its immutable views, so the site contains data on first start;
 - `.env.example`, safe loopback defaults, CI, tests, security policy, and
   contributor guidance.
 
@@ -103,15 +103,17 @@ See the complete [self-hosted runbook](deploy/self-hosted/README.md).
 
 ## Seed data
 
-`data/seed/` contains a sanitized SQLite database and immutable API views built
-from a read-only Global summary observation on 2026-10-10:
+`data/seed/` contains the complete safe derived SQLite market database available
+at publication time and immutable API views built from it:
 
-- 100 configured market scopes;
-- 29,587 item/server summary rows;
-- no raw response bodies, headers, credentials, or account/session material.
+- 1,102 summary runs and 314,803 price rows across 101 observed market scopes;
+- all 23,799 individual listing observations retained by the research database;
+- no raw response bodies, headers, credentials, account/session material, or
+  seller identities.
 
-This is sample research data, not a current-price promise and not a complete lot
-history. Provenance and rebuild instructions live in
+This is historical research data, not a current-price promise. It contains every
+safe derived row available at publication time, but cannot include listings that
+were never observed between scans. Provenance and rebuild instructions live in
 [data/seed/README.md](data/seed/README.md).
 
 ## Repository map
@@ -123,7 +125,7 @@ history. Provenance and rebuild instructions live in
 | `services/economy-api/` | Authentication and read API |
 | `apps/economy-web/` | React Economy frontend |
 | `deploy/self-hosted/` | Compose, Dockerfiles, and operator scripts |
-| `data/seed/` | Sanitized historical starter database/views |
+| `data/seed/` | Historical derived market database/views |
 | `tests/` | Contract and integration tests |
 
 ## Safety boundaries
@@ -144,6 +146,6 @@ without attaching credentials, key logs, or packet captures.
 ## License
 
 Project-owned source code is licensed under [Apache-2.0](LICENSE). The bundled
-sanitized market observations, item metadata, names, and other client-derived
+derived market observations, item metadata, names, and other client-derived
 data are **not** relicensed under Apache-2.0; see [DISCLAIMER.md](DISCLAIMER.md)
 and [data/seed/README.md](data/seed/README.md).

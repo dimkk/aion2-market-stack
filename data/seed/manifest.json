@@ -1,21 +1,23 @@
 {
-  "activeItems": 29587,
   "build": 25650019,
   "catalogItems": 9100,
   "credentialsExported": false,
-  "databaseSha256": "972a0d37acb24ee2ff8a93039296130e14ff79244bf59f1d8037348f221a3c8b",
-  "legacyContractNormalized": true,
+  "databaseSha256": "a5c279b78aaf273c1780286aeaa1282eae05e01fb591562c63e808b68559a47f",
   "limitations": [
-    "Historical sample; not current market data.",
-    "Summary rows are not individual auction listings.",
+    "Historical derived market observations; not live prices.",
+    "The database contains every safe derived row available at publication time, not every listing that ever existed.",
+    "Raw captures, transport/session material, account data, and character data are excluded.",
     "Game-derived data is not covered by the source-code license."
   ],
-  "marketScopes": 100,
-  "observedAt": "2026-10-10T06:45:06Z",
+  "listingRows": 23799,
+  "listingScopes": 2,
+  "marketScopes": 101,
+  "observedFrom": "2026-10-04T22:19:35.276340Z",
+  "observedTo": "2026-10-10T12:16:55.565997Z",
   "rawExposed": false,
-  "revision": "b25650019-20261010T064506Z-c3ddcd92851a2",
-  "schemaVersion": "aion2.public-seed/v1",
-  "sourceSha256": "1bc907db8ced782f4a8b368a406dc1f5e44b4f10fb773fb745238f3536fa7d5d",
-  "summaryRows": 29587,
-  "views": 26
+  "revision": "b25650019-20261010T121655Z-c72f2adeb7b35",
+  "schemaVersion": "aion2.public-seed/v2",
+  "summaryRows": 314803,
+  "summaryRuns": 1102,
+  "views": 29
 }

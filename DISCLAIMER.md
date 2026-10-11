@@ -26,16 +26,20 @@ debug, adapt, and finish it yourself. The core market parsing pipeline has worke
 in the authors' research environment across dozens of parsing runs, including
 all 100 configured Global market scopes, but this does not guarantee that the
 published checkout, your client build, or future protocol versions will work.
-The bundled database is a historical sanitized sample, not live data and not a
-complete listing archive.
+The bundled database is the complete credential-free derived market database
+available to the authors at publication time. It contains historical summary
+observations and collected listing rows, but it is not live data and cannot be
+a complete archive of every listing that existed between scans.
 
 **Русский.** Текущая публичная Docker-сборка не прошла чистую сквозную приёмку
 на независимой машине. Будьте готовы самостоятельно исправлять, адаптировать и
 доделывать её. Ядро рыночного парсинга работало в исследовательском контуре
 авторов на десятках запусков, включая обход всех 100 настроенных Global market
 scopes, но это не гарантирует работу опубликованного checkout, вашей версии
-клиента или будущих версий протокола. Встроенная БД — исторический обезличенный
-пример, а не live-цены и не полный архив лотов.
+клиента или будущих версий протокола. Встроенная БД содержит все безопасные
+производные рыночные данные, имевшиеся у авторов на момент публикации: историю
+сводных цен и собранные строки лотов. Это не live-цены и не архив каждого лота,
+существовавшего между сканированиями.
 
 ## Data and trademarks
 

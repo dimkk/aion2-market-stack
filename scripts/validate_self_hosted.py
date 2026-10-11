@@ -24,6 +24,7 @@ REQUIRED = (
     "deploy/self-hosted/scripts/Start-Collector.ps1",
     "tools/public_collector/collector.py",
     "services/market-worker/worker.py",
+    "scripts/build_seed_from_database.py",
     "exports/economy/item-catalog.json",
     "exports/economy/item-icons.json",
     "exports/economy/recipes.json",
@@ -72,9 +73,11 @@ def validate(require_assets: bool) -> dict[str, object]:
 
     seed = json.loads((ROOT / "data/seed/manifest.json").read_text(encoding="utf-8"))
     if (
-        seed.get("schemaVersion") != "aion2.public-seed/v1"
-        or seed.get("marketScopes") != 100
-        or seed.get("summaryRows", 0) < 1
+        seed.get("schemaVersion") != "aion2.public-seed/v2"
+        or seed.get("marketScopes", 0) < 100
+        or seed.get("summaryRuns", 0) < 1_000
+        or seed.get("summaryRows", 0) < 300_000
+        or seed.get("listingRows", 0) < 20_000
         or seed.get("rawExposed") is not False
         or seed.get("credentialsExported") is not False
     ):
