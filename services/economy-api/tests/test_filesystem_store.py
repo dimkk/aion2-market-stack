@@ -80,7 +80,7 @@ class FileSystemEconomyStoreTest(unittest.TestCase):
     def test_crawler_status_is_revision_bound_and_read_back(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             store = FileSystemEconomyStore(directory)
-            revision = "b25650019-cloudru-test"
+            revision = "b25650019-selfhosted-test"
             body = self._view(revision)
             view_digest = hashlib.sha256(body).hexdigest()
             store.stage_view(revision, "items.default.json", body, view_digest)

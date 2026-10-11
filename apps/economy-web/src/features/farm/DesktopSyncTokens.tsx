@@ -26,7 +26,7 @@ export function DesktopSyncTokens({
   locale: AppLocale;
 }) {
   const [tokens, setTokens] = useState<DesktopSyncToken[]>([]);
-  const [label, setLabel] = useState("A2Tools farm tracker");
+  const [label, setLabel] = useState("Desktop farm tracker");
   const [issuedToken, setIssuedToken] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -114,7 +114,7 @@ export function DesktopSyncTokens({
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <KeyRound className="size-4 text-emerald-300" />
-          {tr("Автосинхронизация A2Tools", "A2Tools auto-sync")}
+          {tr("Автосинхронизация desktop tracker", "Desktop tracker auto-sync")}
         </CardTitle>
         <p className="text-sm text-muted-foreground">
           {tr(

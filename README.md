@@ -1,5 +1,9 @@
 # AION2 Market Stack
 
+<p align="center">
+  <img src="docs/assets/aion2-market-stack-hero.png" alt="AION2 Market Stack architecture hero" width="100%">
+</p>
+
 [![CI](https://github.com/dimkk/aion2-market-stack/actions/workflows/ci.yml/badge.svg)](https://github.com/dimkk/aion2-market-stack/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache--2.0-blue.svg)](LICENSE)
 [![Windows collector](https://img.shields.io/badge/collector-Windows%20%2B%20Npcap-2f81f7.svg)](deploy/self-hosted/README.md)
@@ -40,7 +44,7 @@ flowchart LR
   G --> I[React Economy UI]
 ```
 
-- standalone Windows/Npcap collector; no A2Tools runtime or source code;
+- standalone project-owned Windows/Npcap collector;
 - bounded analyzer and read-only market crawler;
 - SQLite market history and immutable snapshot publication;
 - PostgreSQL-backed authentication with `guest`, `registered`, `approved`, and

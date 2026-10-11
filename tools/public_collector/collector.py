@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Standalone Windows collector for the public self-hosted distribution.
 
-The collector is deliberately independent from A2Tools. It uses the project-owned
+The collector is a standalone project-owned component. It uses the project-owned
 Npcap recorder, bundles one bounded process-scoped capture with an NSS TLS keylog,
 and atomically drops the private bundle into the local Docker worker inbox.
 

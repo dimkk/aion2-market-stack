@@ -4,9 +4,8 @@ This is the public, local-first distribution of AION2 Protocol Lab. It keeps
 capture and session material on the Windows host and runs only the analyzer,
 read-only market crawler, PostgreSQL, Economy API and web UI in Docker.
 
-It does **not** modify or depend on A2Tools. The host collector is a small
-project-owned Npcap wrapper. A2Tools may run alongside it, but it is not part of
-this stack.
+The host collector is a small standalone project-owned Npcap wrapper. It may run
+alongside other overlays, but they are not part of this stack.
 
 The first start seeds SQLite and immutable views from `data/seed/`, so the UI is
 immediately populated with a historical sanitized example. A successful live

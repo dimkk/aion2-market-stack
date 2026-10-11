@@ -2151,7 +2151,7 @@ function Farm({
           title={tr("Фарм-сессий пока нет", "No farm sessions yet")}
           action={
             <CopyForLlm
-              message="Farm history пуста: импортируйте завершённую сессию из A2Tools."
+              message="Farm history пуста: импортируйте завершённую сессию из desktop farm tracker."
               context={{
                 severity: "warning",
                 state: "farm-sessions-empty",
@@ -2161,8 +2161,8 @@ function Farm({
           }
         >
           {tr(
-            "Завершите Start/Stop в модуле A2Tools и импортируйте агрегированный JSON. После синхронизации история доступна на любом устройстве этого аккаунта.",
-            "Complete Start/Stop in the A2Tools module and import the aggregated JSON. After synchronization, history is available on any device for this account.",
+            "Завершите Start/Stop в desktop farm tracker и импортируйте агрегированный JSON. После синхронизации история доступна на любом устройстве этого аккаунта.",
+            "Complete Start/Stop in the desktop farm tracker and import the aggregated JSON. After synchronization, history is available on any device for this account.",
           )}
         </Alert>
       )}

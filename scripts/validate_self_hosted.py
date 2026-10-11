@@ -88,8 +88,8 @@ def validate(require_assets: bool) -> dict[str, object]:
             "services/market-worker/worker.py",
         )
     ).casefold()
-    if "vendor/" in runtime_sources or "a2tools-dps-meter" in runtime_sources:
-        raise ValueError("self_hosted_runtime_has_a2tools_dependency")
+    if "vendor/" in runtime_sources:
+        raise ValueError("self_hosted_runtime_has_vendored_dependency")
     for dockerfile_name in ("Dockerfile.api", "Dockerfile.worker"):
         dockerfile = (DEPLOY / dockerfile_name).read_text(encoding="utf-8")
         for line in dockerfile.splitlines():

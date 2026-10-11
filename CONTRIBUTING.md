@@ -10,5 +10,5 @@ and safe to reproduce.
 5. Separate implemented, tested and live-verified claims in the pull request.
 
 Third-party code requires an exact upstream URL, immutable ref and license
-review. Do not paste code from A2Tools or other protocol projects into this
-repository merely because the behavior looks useful.
+review. Do not paste code from unrelated protocol projects into this repository
+merely because the behavior looks useful.
